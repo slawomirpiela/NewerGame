@@ -1,3 +1,4 @@
-interface ReadAction{
-  void hitSide();
+abstract class ReadAction{
+  abstract void hitSide();
+  abstract void hitEnd();
 }

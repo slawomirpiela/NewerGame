@@ -1,11 +1,9 @@
-class Game extends ReadAction
+class Bullet extends ReadAction
 {
-  
   void hitSide()
   {
   }
   void hitEnd()
   {
   }
-  
 }
