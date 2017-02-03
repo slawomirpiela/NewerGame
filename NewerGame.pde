@@ -12,7 +12,7 @@ Bullet bullet1;
 
 void draw()
 {
-  if(frameCount % 60 == 20){
+  if(frameCount % 30 == 0){
   bullet1.draw();
   play1.update();
   }

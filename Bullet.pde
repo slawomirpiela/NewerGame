@@ -8,8 +8,7 @@ class Bullet extends ReadAction
   }
   
   void draw(){
-    fill(255);
-    rect(random(0, width), random(height*.4, height), 10, 10);
+    rect(mouseX, height-40, 10, 10);
     fill(255);
   }
   
