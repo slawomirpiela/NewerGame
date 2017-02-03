@@ -1,0 +1,3 @@
+interface ReadAction{
+  void hitSide();
+}
