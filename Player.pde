@@ -5,19 +5,18 @@ class Player extends ReadAction{
   Player(int x, int y){
     this.x = x;
     this.y = y;
-    hitSide();
   }
   
   void update(){
     x = mouseX;
-    rect(x, y, 80, 20);
+    triangle(x-30, height - 50, x, height - 90, x+30, height - 50);
   }
 
   void hitSide(){
     if(mouseX == 0){
       x+=5;
     }
-    if(x == width){
+    if(mouseX == width){
       x-=100;
     }
     }
