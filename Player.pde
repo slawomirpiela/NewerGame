@@ -1,32 +1,36 @@
 class Player extends ReadAction{
-  int x, y;
+  PVector pos;
   float jitter, angle;
   char left, right;
   float rotatin, strength;
   
   //Constr
   Player(int x, int y, char left, char right){
-    this.x = x;
-    this.y = y;
+    pos = new PVector(x, y);
     this.left = left;
     this.right = right;
 
   }
   
   void update(){
-    rotatin = 90;
+    rotatin = 1;
     strength = 1;
-    x = mouseX;
+    pos.x = mouseX;
     pushMatrix();
-    translate(x,y);
-    rotate(second()*radians(rotatin) * strength);
+    translate(pos.x,pos.y);
+    //rotate(millis()/10*radians(rotatin) * strength);
+    println(radians(rotatin)*strength);
     if (checkKey(left))  
     {
-      strength=- 0.5;
+      rotate(millis()/10*radians(1) * strength);
     }
     if (checkKey(right))
     {
-      rotate(radians(90));
+      rotate(millis()/10*radians(-.01) * strength);
+    }
+    else
+    {
+      rotate(millis()/10*radians(0.5) * strength);
     }
     triangle(-30, 30, 0, -30, 30, 30); 
     popMatrix();
@@ -34,10 +38,10 @@ class Player extends ReadAction{
 
   void hitSide(){
     if(mouseX == 0){
-      x+=5;
+      pos.x+=5;
     }
     if(mouseX == width){
-      x-=100;
+      pos.x-=100;
     }
     }
   void hitEnd(){
