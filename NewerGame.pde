@@ -12,8 +12,10 @@ Bullet bullet1;
 
 void draw()
 {
-  if(frameCount % 30 == 0){
+  //if(frameCount % 60 == 0){
   bullet1.draw();
+  background(0);
   play1.update();
-  }
+  //play1.hitSide();
+  //}
 }

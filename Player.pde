@@ -5,6 +5,7 @@ class Player extends ReadAction{
   Player(int x, int y){
     this.x = x;
     this.y = y;
+    hitSide();
   }
   
   void update(){
@@ -13,7 +14,13 @@ class Player extends ReadAction{
   }
 
   void hitSide(){
-  }
+    if(mouseX == 0){
+      x+=5;
+    }
+    if(x == width){
+      x-=100;
+    }
+    }
   void hitEnd(){
   }
 }
