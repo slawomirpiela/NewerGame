@@ -1,5 +1,6 @@
 class Player extends ReadAction{
   int x, y;
+  float jitter, angle;
   
   //Constr
   Player(int x, int y){
@@ -8,8 +9,12 @@ class Player extends ReadAction{
   }
   
   void update(){
-    x = mouseX;
-    triangle(x-30, height - 50, x, height - 90, x+30, height - 50);
+   x = mouseX;
+    pushMatrix();
+    translate(x,y);
+    rotate(second()*radians(3));
+    triangle(-30, 30, 0, -30, 30, 30); 
+    popMatrix();
   }
 
   void hitSide(){
