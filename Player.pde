@@ -13,25 +13,25 @@ class Player extends ReadAction{
   }
   
   void update(){
-    rotatin = 1;
+   // rotatin = 10;
     strength = 1;
     pos.x = mouseX;
     pushMatrix();
     translate(pos.x,pos.y);
-    //rotate(millis()/10*radians(rotatin) * strength);
     println(radians(rotatin)*strength);
     if (checkKey(left))  
     {
-      rotate(millis()/10*radians(1) * strength);
+      rotatin = second()*-.5;
     }
     if (checkKey(right))
     {
-      rotate(millis()/10*radians(-.01) * strength);
+      rotatin = second()*.5;
     }
     else
     {
-      rotate(millis()/10*radians(0.5) * strength);
+      rotatin = second()*0.10;
     }
+    rotate(second()*radians(rotatin));
     triangle(-30, 30, 0, -30, 30, 30); 
     popMatrix();
   }
