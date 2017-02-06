@@ -1,26 +1,27 @@
 class Player extends ReadAction{
   PVector pos;
-  float jitter, angle;
+  //float jitter, angle;
   char left, right;
-  float rotatin, strength;
+  float rotatin; //strength;
   
   //Constr
   Player(int x, int y, char left, char right){
     pos = new PVector(x, y);
     this.left = left;
     this.right = right;
-
   }
   
   void update(){
    // rotatin = 10;
-    strength = 1;
-    pos.x = mouseX;
+    //strength = 1;
+    pos.x = mouseX - 30;
+    pos.y = height - 80;
+    int pwidth = 80;
     pushMatrix();
-    translate(pos.x,pos.y);
+    //translate(pos.x,pos.y);
     //println(radians(rotatin)*strength);
     println(pos.x,pos.y);
-    if (checkKey(left))  
+    /*if (checkKey(left))  
     {
       rotatin = second()*-9;
     }
@@ -32,22 +33,24 @@ class Player extends ReadAction{
     {
       rotatin = second()*0.10;
     }
-    //rotate(second()*radians(rotatin));
+    rotate(second()*radians(rotatin));
+    */
     fill(0);
     stroke(0);
     strokeWeight(3);
-    rect(30, 20, 65, 18, 7);
+    rect(pos.x, pos.y, pwidth, 18, 7);
     popMatrix();
+    if(mouseX > 300){
+      pos.x=+95;
+    }
+    if(pos.x == width){
+      pos.x-=100;
+    }
+
   }
 
   void hitSide(){
-    if(mouseX == 0){
-      pos.x+=5;
-    }
-    if(mouseX == width){
-      pos.x-=100;
-    }
     }
   void hitEnd(){
-  }
+    }
 }
