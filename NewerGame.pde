@@ -3,12 +3,12 @@ import java.util.*;
 void setup()
 {
   size(1000, 800);
-  bullet1 = new Bullet(0, 0);
+  mob1 = new Mob(0, 0);
   play1 = new Player(0, 0, 'a', 'd');
 }
 
 Player play1;
-Bullet bullet1;
+Mob mob1;
 boolean[] keys = new boolean[1000];
 
 void keyPressed()
@@ -31,11 +31,12 @@ boolean checkKey(int k)
 void draw()
 {
   //if(frameCount % 60 == 0){
-  bullet1.draw();
+  mob1.draw();
   background(255);
 
 
   play1.update();
+  mob1.draw();
   //play1.hitSide();
   //}
 }
