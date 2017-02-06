@@ -18,10 +18,11 @@ class Player extends ReadAction{
     pos.x = mouseX;
     pushMatrix();
     translate(pos.x,pos.y);
-    println(radians(rotatin)*strength);
+    //println(radians(rotatin)*strength);
+    println(pos.x,pos.y);
     if (checkKey(left))  
     {
-      rotatin = second()*-.5;
+      rotatin = second()*-9;
     }
     if (checkKey(right))
     {
@@ -31,8 +32,11 @@ class Player extends ReadAction{
     {
       rotatin = second()*0.10;
     }
-    rotate(second()*radians(rotatin));
-    triangle(-30, 30, 0, -30, 30, 30); 
+    //rotate(second()*radians(rotatin));
+    fill(0);
+    stroke(0);
+    strokeWeight(3);
+    rect(30, 20, 65, 18, 7);
     popMatrix();
   }
 
