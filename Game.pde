@@ -46,19 +46,25 @@ class Game implements Action{
     
   }
   
-  void wall(){
+  void rightWall(){
     //Change direction where the mobs are going
     if(direction == DIRECTION.RIGHT){
         direction = DIRECTION.LEFT;
-      //}
-        //else{
-        //direction = DIRECTION.RIGHT;
-        //}
+      }
+  }
+  
+  void leftWall(){
+  
+    if(direction == DIRECTION.LEFT){
+          direction = DIRECTION.RIGHT;
+        }
         //for (Mob mobbies : Mobs){
         //  mobbies.moveDown();
        // }
-   }
-}
+  
+  }
+   
+
   
   void hit(){
     ArrayList<Mob> deadMobs = new ArrayList<Mob>();

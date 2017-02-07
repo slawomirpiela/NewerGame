@@ -15,8 +15,12 @@ class Mob
     strokeWeight(3); 
     rect(mobpos.x, mobpos.y, 40, 15);
     
-  if (mobpos.x > width - 30 || mobpos.x < 0) {
-    action.wall(); 
+  if (mobpos.x > width - 30) {
+    action.rightWall(); 
+  }
+  
+  if (mobpos.x < 5 ){
+    action.leftWall();
   }
    
   //if (mobpos.y > height - 20) {
@@ -30,11 +34,11 @@ class Mob
   }
   
   void toTheRight(){
-    mobpos.x += 5;
+    mobpos.x += 2;
   }
   
   void toTheLeft(){
-    mobpos.x -= 3;
+    mobpos.x -= 2;
   }
   void moveDown(){
     mobpos.y+=3;

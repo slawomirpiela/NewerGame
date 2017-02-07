@@ -1,6 +1,7 @@
 interface Action{
-  void wall();
   void end();
+  void leftWall();
+  void rightWall();
 }
 
 public enum DIRECTION {
