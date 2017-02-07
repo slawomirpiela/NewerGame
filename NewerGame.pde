@@ -4,7 +4,7 @@ void setup()
 {
   size(1000, 800);
   mob1 = new Mob(0, 0);
-  play1 = new Player(0, 0, 'a', 'd');
+  play1 = new Player(0, height - 80, 'a', 'd');
 }
 
 
@@ -39,7 +39,9 @@ void draw()
 
 
   play1.update();
+    mob1.draw();
   mob1.update();
+
   println(Mobs.size());
   //play1.hitSide();
   }

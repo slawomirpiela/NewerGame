@@ -15,7 +15,7 @@ class Player {
    // rotatin = 10;
     //strength = 1;
     pos.x = mouseX - 30;
-    pos.y = height - 80;
+    //pos.y = height - 80;
     int pwidth = 80;
     //pushMatrix();
     //translate(pos.x,pos.y);
