@@ -16,10 +16,14 @@ class Player {
     stroke(0);
     strokeWeight(3); 
     rect(pos.x, pos.y, pwidth, 18, 7);
+    if(pos.x == 50){
+      pos.x = 5;
+    }
   }
   
   void mouseClicked(){
     //Will do shot the ball
+    //or will I do it in Ball class?
   }
 
 }
