@@ -1,7 +1,6 @@
-class Game {
+class Game implements Action{
   ArrayList<Mob> Mobs = new ArrayList<Mob>(); 
   Player play1;
-  Mob mob1;
 
   Game(){
     play1 = new Player(0, height - 80, 'a', 'd');
@@ -14,15 +13,17 @@ class Game {
       //To check if correct amt of mobs have been spawned
       println(Mobs.size());
       }
-
     }
   }
   
   void update(){
     background(170,25,25);
     play1.draw();
-     for (Mob mob1 : Mobs) {
-      mob1.display();
+    
+     for (Mob mobbies : Mobs) {
+      mobbies.display();
       }
   }
+  void wall(){}
+  void end(){}
 }

@@ -1,6 +1,7 @@
 class Mob
 {
-  Mob(float x, float y) {
+  int x, y;
+  Mob(int x, int y) {
     mobpos = new PVector(x,y);
     //this.mobpos.x = x;
     //this.mobpos.y = y;

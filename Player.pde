@@ -16,9 +16,10 @@ class Player {
     stroke(0);
     strokeWeight(3); 
     rect(pos.x, pos.y, pwidth, 18, 7);
-    if(pos.x == 50){
-      pos.x = 5;
-    }
+    //need if statements to make sure it doesn't go to the sides
+    //if(pos.x == 50){
+    //  pos.x = 5;
+    //}
   }
   
   void mouseClicked(){
