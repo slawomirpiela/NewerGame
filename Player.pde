@@ -9,17 +9,17 @@ class Player {
     this.right = right;
   }
   
-  void update(){
+  void draw(){
     pos.x = mouseX - 30;
     int pwidth = 80;
-    fill(0);
+    fill(255);
     stroke(0);
     strokeWeight(3); 
     rect(pos.x, pos.y, pwidth, 18, 7);
   }
   
   void mouseClicked(){
-    
+    //Will do shot the ball
   }
 
 }

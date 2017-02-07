@@ -1,17 +1,17 @@
 import java.util.*;
 
+
+PVector mobpos;
+PVector pos;
+Game game;
 void setup()
 {
   size(1000, 800);
-  mob1 = new Mob(0, 0);
-  play1 = new Player(0, height - 80, 'a', 'd');
+  game = new Game();
 }
 
 
-Player play1;
-Mob mob1;
 boolean[] keys = new boolean[1000];
-List<Mob> Mobs = new ArrayList<Mob>(); 
 
 
 void keyPressed()
@@ -33,16 +33,9 @@ boolean checkKey(int k)
 
 void draw()
 {
-  //if(frameCount % 60 == 0){
-  //mob1.draw();
-  //background(255);
+  background(255);
+  game.update();
 
-
-  play1.update();
-
-    mob1.draw();
-  mob1.update();
-
-  println(Mobs.size());
+  //println(Mobs.size());
   //play1.hitSide();
   }
