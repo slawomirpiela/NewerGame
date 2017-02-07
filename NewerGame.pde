@@ -35,10 +35,11 @@ void draw()
 {
   //if(frameCount % 60 == 0){
   //mob1.draw();
-  background(255);
+  //background(255);
 
 
   play1.update();
+
     mob1.draw();
   mob1.update();
 
