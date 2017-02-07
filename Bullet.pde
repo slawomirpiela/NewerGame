@@ -1,4 +1,4 @@
-class Bullet extends ReadAction
+class Bullet
 {
   int x, y;
   int speed = 2;

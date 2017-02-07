@@ -7,9 +7,12 @@ void setup()
   play1 = new Player(0, 0, 'a', 'd');
 }
 
+
 Player play1;
 Mob mob1;
 boolean[] keys = new boolean[1000];
+List<Mob> Mobs = new ArrayList<Mob>(); 
+
 
 void keyPressed()
 { 
@@ -31,12 +34,12 @@ boolean checkKey(int k)
 void draw()
 {
   //if(frameCount % 60 == 0){
-  mob1.draw();
+  //mob1.draw();
   background(255);
 
 
   play1.update();
-  mob1.draw();
+  mob1.update();
+  println(Mobs.size());
   //play1.hitSide();
-  //}
-}
+  }

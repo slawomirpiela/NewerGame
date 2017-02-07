@@ -1,29 +1,31 @@
-class Mob extends ReadAction
+class Mob
 {
   
-  public int x, y;
+  float x, y;
   PVector mobpos;
+
   
-  Mob(int x, int y) {
+  Mob(float x, float y) {
     mobpos = new PVector(x,y);
   }
   
-  void draw() {
+  void update() {
+    
+    x = mobpos.x;
+    y = mobpos.y;
     for (int y = 0; y < 7; y++) {
       for (int x = 0; x < 20; x++) {
-          fill(random(0,255));
-          rect(x, y, 20, 20);
-          x = x+50;
-          y =y +50;
-   
-      } 
-    }
-   
-  }
+      Mobs.add(new Mob(x * 30, y * 30)); // Spawn mobs & add to array
 
-  
-  void hitSide(){
-  }
-  void hitEnd(){
+      rect(x, y, 20, 20);
+      fill(random(177,200));
+      //update();
+      //mobpos.y =+ 30;
+      //.x = x+30;
+      }
+        
+      } 
+    
+    
   }
 }

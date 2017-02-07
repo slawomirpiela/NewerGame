@@ -1,4 +1,4 @@
-class Player extends ReadAction{
+class Player {
   PVector pos;
   //float jitter, angle;
   char left, right;
@@ -17,7 +17,7 @@ class Player extends ReadAction{
     pos.x = mouseX - 30;
     pos.y = height - 80;
     int pwidth = 80;
-    pushMatrix();
+    //pushMatrix();
     //translate(pos.x,pos.y);
     //println(radians(rotatin)*strength);
     println(pos.x,pos.y);
@@ -38,14 +38,15 @@ class Player extends ReadAction{
     fill(0);
     stroke(0);
     strokeWeight(3);
+    
     rect(pos.x, pos.y, pwidth, 18, 7);
-    popMatrix();
-    if(mouseX > 300){
-      pos.x=+95;
-    }
-    if(pos.x == width){
-      pos.x-=100;
-    }
+    //popMatrix();
+    //if(mouseX > 300){
+    //  pos.x=+95;
+    //}
+    //if(pos.x == width){
+     // pos.x-=100;
+    //}
 
   }
 
