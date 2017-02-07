@@ -10,8 +10,7 @@ class Game implements Action{
       for (int y = 1; y < 10; y++){
       //mob1.update();
       
-    translate(x,y);
-      Mobs.add(new Mob(x * 50, y *30));
+      Mobs.add(new Mob(x*50, y*30));
 
       //To check if correct amt of mobs have been spawned
       println(Mobs.size());
@@ -25,27 +24,46 @@ class Game implements Action{
     
      for (Mob mobbies : Mobs) {
       mobbies.display();
-      mobbies.update();
       }
-     
-     if(direction == DIRECTION.RIGHT){
-      for (Mob mobbies : Mobs){
-        mobbies.toTheRight();
+      
+      if(direction == DIRECTION.RIGHT) {
+        for (Mob mobbies : Mobs) {
+          mobbies.toTheRight();
+        }
+      } else if(direction == DIRECTION.LEFT){
+        for (Mob mobbies : Mobs) {
+          mobbies.toTheLeft();
       }
-    }
+     }
+     hit();
+      
+      
+      
       
     if(Mobs.size() == 0) {
     println("Winnin'");
     }
     
-    
-    
   }
   
   void wall(){
     //Change direction where the mobs are going
-    mobpos.x += second(); 
+    if(direction == DIRECTION.RIGHT){
+        direction = DIRECTION.LEFT;
+      }
+        else{
+        direction = DIRECTION.RIGHT;
+        }
+   }
+  
+  void hit(){
+    ArrayList<Mob> deadMobs = new ArrayList<Mob>();
+    
+    for (Mob mobbies : deadMobs) {
+      Mobs.remove(mobbies);
+    }
   }
+  
   
   void end(){
     println("Losin'");

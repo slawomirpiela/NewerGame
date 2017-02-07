@@ -19,7 +19,7 @@ class Mob
   }
   
   void toTheRight(){
-    mobpos.x += 1;
+    mobpos.x += 5;
   }
   
   void toTheLeft(){
