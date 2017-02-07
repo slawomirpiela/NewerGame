@@ -1,10 +1,12 @@
 class Game implements Action{
   ArrayList<Mob> Mobs = new ArrayList<Mob>(); 
   Player play1;
+  SuperAttack attack;
   DIRECTION direction = DIRECTION.RIGHT;
 
   Game(){
     play1 = new Player(0, height - 80, 'a', 'd');
+    attack = new SuperAttack();
     
     for (int x = 1; x < 10; x++) {
       for (int y = 1; y < 10; y++){
@@ -37,11 +39,13 @@ class Game implements Action{
      }
      hit();
       
-      
-      
-      
     if(Mobs.size() == 0) {
     println("Winnin'");
+    }
+    
+    if(second() % 10 == 0){
+      attack.draw();
+    
     }
     
   }
