@@ -1,5 +1,4 @@
-PVector mobpos;
-PVector pos;
+
 Game game;
 void setup()
 {

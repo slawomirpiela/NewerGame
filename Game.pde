@@ -10,7 +10,7 @@ class Game implements Action{
       for (int y = 1; y < 10; y++){
       //mob1.update();
       
-      Mobs.add(new Mob(x*50, y*30));
+      Mobs.add(new Mob(x*50, y*30, this));
 
       //To check if correct amt of mobs have been spawned
       println(Mobs.size());
@@ -23,7 +23,7 @@ class Game implements Action{
     play1.draw();
     
      for (Mob mobbies : Mobs) {
-      mobbies.display();
+      mobbies.draw();
       }
       
       if(direction == DIRECTION.RIGHT) {
@@ -50,11 +50,15 @@ class Game implements Action{
     //Change direction where the mobs are going
     if(direction == DIRECTION.RIGHT){
         direction = DIRECTION.LEFT;
-      }
-        else{
-        direction = DIRECTION.RIGHT;
-        }
+      //}
+        //else{
+        //direction = DIRECTION.RIGHT;
+        //}
+        //for (Mob mobbies : Mobs){
+        //  mobbies.moveDown();
+       // }
    }
+}
   
   void hit(){
     ArrayList<Mob> deadMobs = new ArrayList<Mob>();
