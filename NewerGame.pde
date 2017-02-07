@@ -10,7 +10,4 @@ void setup()
 void draw()
 {
   game.update();
-
-  //println(Mobs.size());
-  //play1.hitSide();
   }

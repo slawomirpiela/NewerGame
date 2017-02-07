@@ -1,6 +1,7 @@
 class Game implements Action{
   ArrayList<Mob> Mobs = new ArrayList<Mob>(); 
   Player play1;
+  DIRECTION direction = DIRECTION.RIGHT;
 
   Game(){
     play1 = new Player(0, height - 80, 'a', 'd');
@@ -24,15 +25,26 @@ class Game implements Action{
     
      for (Mob mobbies : Mobs) {
       mobbies.display();
+      mobbies.update();
       }
+     
+     if(direction == DIRECTION.RIGHT){
+      for (Mob mobbies : Mobs){
+        mobbies.toTheRight();
+      }
+    }
       
     if(Mobs.size() == 0) {
     println("Winnin'");
     }
+    
+    
+    
   }
   
   void wall(){
     //Change direction where the mobs are going
+    mobpos.x += second(); 
   }
   
   void end(){

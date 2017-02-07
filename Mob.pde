@@ -1,21 +1,28 @@
 class Mob
 {
-  int x, y;
-  Mob(int x, int y) {
-    //mobpos = new PVector(x,y);
-    this.x = x;
-    this.y = y;
+  PVector mobpos;;
+  Mob(int x, int y){
+    mobpos = new PVector(x,y);
+    this.mobpos.x = x;
+    this.mobpos.y = y;
   }
   
   void display() {
     //fill(random(170,255));
     stroke(0);
     strokeWeight(3); 
-    //rect(mobpos.x, mobpos.y, 20, 20);
-    rect(x, y, 40, 15);
+    rect(mobpos.x, mobpos.y, 40, 15);
    }
-   
-  void update(){
-     println(mobpos.x,mobpos.y);
+  
+  void update() {
+
+  }
+  
+  void toTheRight(){
+    mobpos.x += 1;
+  }
+  
+  void toTheLeft(){
+    mobpos.x -= 1;
   }
 }
