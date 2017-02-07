@@ -5,10 +5,12 @@ class Game implements Action{
   Game(){
     play1 = new Player(0, height - 80, 'a', 'd');
     
-    for (int a = 1; a < 5; a++) {
-      for (int b = 1; b < 5; b++){
+    for (int x = 1; x < 10; x++) {
+      for (int y = 1; y < 10; y++){
       //mob1.update();
-      Mobs.add(new Mob(30, 30));
+      
+    translate(x,y);
+      Mobs.add(new Mob(x * 50, y *30));
 
       //To check if correct amt of mobs have been spawned
       println(Mobs.size());
@@ -23,7 +25,17 @@ class Game implements Action{
      for (Mob mobbies : Mobs) {
       mobbies.display();
       }
+      
+    if(Mobs.size() == 0) {
+    println("Winnin'");
+    }
   }
-  void wall(){}
-  void end(){}
+  
+  void wall(){
+    //Change direction where the mobs are going
+  }
+  
+  void end(){
+    println("Losin'");
+  }
 }
