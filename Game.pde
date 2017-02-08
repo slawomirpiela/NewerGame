@@ -27,6 +27,11 @@ class Game implements Action{
     play1.draw();
     ball.draw();
     
+    if(ball.y == play1.pos.y){
+    ball.left();
+    ball.changeDir();
+    }
+    
      for (Mob mobbies : Mobs) {
       mobbies.draw();
       }

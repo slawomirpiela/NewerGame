@@ -2,17 +2,23 @@ class Mob
 {
   PVector mobpos;
   Action action;;
+  float r;
+  float g;
+  float b;
+  
   Mob(int x, int y, Action action){
     mobpos = new PVector(x,y);
     this.mobpos.x = x;
     this.mobpos.y = y;
     this.action = action;
+    r = random(50,255);
+    g = random(100,255);
+    b = random(140,255);
   }
   
   void draw() {
     //fill(random(170,255));
-    stroke(0);
-    strokeWeight(3); 
+    fill(r,g,b);
     rect(mobpos.x, mobpos.y, 40, 15);
     
   if (mobpos.x > width - 30) {
