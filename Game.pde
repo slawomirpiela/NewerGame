@@ -23,7 +23,7 @@ class Game extends BasicActions implements Action {
   }
   
   void update(){
-    background(100,100,100);
+    background(0);
     play1.update();
     ball.update();
     ball.bounce();
@@ -83,16 +83,14 @@ class Game extends BasicActions implements Action {
   }
   
   void hit(){
-    if (hit == true){
       println("NO");
     
     ArrayList<Mob> deadMobs = new ArrayList<Mob>();
     for (Mob mobbies : deadMobs) {
       Mobs.remove(mobbies);
     }
-    }
+    //}
   }
-  
   
   void end(){
     println("Losin'");

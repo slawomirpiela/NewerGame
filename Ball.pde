@@ -17,13 +17,14 @@ class Ball extends BasicActions
    ellipse(pos.x, pos.y, pos.z, pos.z);
    pos.x += speedx;
    pos.y += speedy;
-  }
+   
+   //resetIfdies();
+ }
   
   void resetIfdies(){
     pos.x = width/2;
     pos.y = height/2;
-    speedx = 0;
-    speedy = 4;
+    
   }
   
   void left(){
@@ -37,6 +38,7 @@ class Ball extends BasicActions
   void changeDir(){
     speedy *= -1;
   }
+ 
   
   void bounce(){
        //If statements to bounce it off the player
