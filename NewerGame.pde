@@ -1,5 +1,5 @@
 int stage;
-int noOfLives = 3;
+int noOfLives = 4;
 int playerScore = 0;
 Game game;
 GameMenu menu;

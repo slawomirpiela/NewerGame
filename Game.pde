@@ -1,8 +1,9 @@
 class Game extends BasicActions implements Action {
-
+//Sets the initial direction of the enemies to go right
 DIRECTION direction = DIRECTION.RIGHT;
 
 Game(){
+  //Objects
   play1 = new Player(0, height - 80, 'a', 'd');
   ball = new Ball(width/2, height/2, 10);
     
@@ -14,16 +15,18 @@ Game(){
   }
 }
   
+  //Calls methods from sub classes
 void update(){
   background(0);
   play1.update();
   ball.update();
   ball.bounce();
     
+    //Create enemies until hte array is full
   for (Mob mobbies : Mobs) {
     mobbies.update();
   }
-     
+     //Sets the direction of each mob
     if(direction == DIRECTION.RIGHT) {
       for (Mob mobbies : Mobs) {
         mobbies.toTheRight();
@@ -39,6 +42,7 @@ void update(){
     }
 }
   
+  //When hits the walls it changes the direction
   void rightWall(){
     //Change direction where the mobs are going
     if(direction == DIRECTION.RIGHT){
@@ -52,6 +56,8 @@ void update(){
         }
   }
   
+  //Displays score and no of lives left
+  
   void display(){
     //fill(0);
     text("Lives : " + noOfLives, 50, 750);
@@ -60,11 +66,15 @@ void update(){
   
   void hit(){
       println("NO");
-    
-
   }
-  
+//End screen
   void end(){
+    if (noOfLives == 0){
+    background(0);
+    text("The End ", width/2, 200);
+    text("Score : " + playerScore, width/2, 350);
     println("Losin'");
+    
+    }
   }
 }
