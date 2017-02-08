@@ -13,7 +13,7 @@ class Ball
     
   }
   
-  void draw(){
+  void update(){
    fill(255);
    stroke(0);
    ellipseMode(CENTER);

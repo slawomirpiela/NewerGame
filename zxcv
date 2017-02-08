@@ -1,0 +1,197 @@
+[33mcommit 37ca7ae2e761dc4a85be5cc131ffe7cf63f0f8c5[m
+Author: Slawomir Piela <Slawomir Piela>
+Date:   Wed Feb 8 01:57:48 2017 +0000
+
+    day 104 need a bit of sleep
+
+[33mcommit 2c7c0d96074baacc3461acc5a2feb3c414c7c06f[m
+Author: Slawomir Piela <Slawomir Piela>
+Date:   Wed Feb 8 01:51:15 2017 +0000
+
+    day 103, when the ball touches the play1 it bounces it off
+
+[33mcommit 0815475284be07371ed61190b2605749e8dbda0a[m
+Author: Slawomir Piela <Slawomir Piela>
+Date:   Wed Feb 8 01:22:32 2017 +0000
+
+    day 103, created a ball, it will start in the middle of the screen and starts following, now ive got to let player catch it
+
+[33mcommit c980e3301ab1b4a837ea79b8449489ac14767c50[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 22:14:04 2017 +0000
+
+    day 102 got an idea of supper attack from the blocks, just an idea
+
+[33mcommit 52d47116258f8cc310e2f50aba2c9e9a9b2c72f1[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 20:55:49 2017 +0000
+
+    day 102 got menu to work, simple really, now the ball
+
+[33mcommit f2b860556152692027c27a3a14255aebe6a330a9[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 19:56:03 2017 +0000
+
+    day 101 to the left, to the right
+
+[33mcommit f03a28e431a44350c31d96c3be13f7cab8447c2c[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 19:48:19 2017 +0000
+
+    day 100 i am dying, but got the direction of the invaders to change when they hit the wall
+
+[33mcommit df84c345444eb4aa8bf41e0898544868e8e3e026[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 19:31:12 2017 +0000
+
+    day 99 - trying to get the mobs to move to the other side when they hit the wall
+
+[33mcommit ea06f623a4128cbb7c564c6e95e5650d5b07c658[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 18:57:23 2017 +0000
+
+    they are alivegit add .!
+
+[33mcommit 0193e95c4c5da745b497de4c9762cc3504224c77[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 18:32:25 2017 +0000
+
+    got the mobs to work
+
+[33mcommit 734369aa6e024fbdb1505910456223508a578fa6[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 18:16:41 2017 +0000
+
+    trying to get the mobs to display correctly
+
+[33mcommit 7c6701ec745c7a21e9161e4699da8bce051a7b39[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 18:09:26 2017 +0000
+
+    not much working, experimenting with interface
+
+[33mcommit be5145aeb1646edcf2a2fb46a9e4b4f177e28260[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 16:52:24 2017 +0000
+
+    I've decided to make it a ball, into a brick breaking game
+
+[33mcommit 1fe4eb3a4512f0e40c2daa36526c13c0d9e08470[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 16:49:32 2017 +0000
+
+    cleaned up, game class created and all other classes instances are called from it
+
+[33mcommit 43e0e71fa21cecc4b328739f7154b867612bbdac[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 16:24:42 2017 +0000
+
+    new
+
+[33mcommit ea68cc79e6e875a4d4730211087ef54586b64d1e[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 16:23:01 2017 +0000
+
+    cleaned up code
+
+[33mcommit a21c3d3c0bc3551ddca0414b4a1d9b9b80689448[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 15:16:57 2017 +0000
+
+    another try
+
+[33mcommit 89ea68d3653e6183c472aa458bf8e7d95febf413[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Tue Feb 7 11:26:57 2017 +0000
+
+    ehh
+
+[33mcommit 8ad2994d8621fc9ba16423fc344de86e3b926c52[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Mon Feb 6 16:14:19 2017 +0000
+
+    added mobs - blocks, for loop for them but they spawn on each other
+
+[33mcommit c541f17a45f24090d40c005d29843e1aa587e333[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Mon Feb 6 15:45:28 2017 +0000
+
+    more problems, less solutions
+
+[33mcommit f8fd613722454416dcf2e4edad076acc8765da9b[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Mon Feb 6 15:26:47 2017 +0000
+
+    triangle no more, no more I say
+
+[33mcommit fbf5257e98ef45cf28913ba84cb2ef8d0fbe2700[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Mon Feb 6 15:15:10 2017 +0000
+
+    why
+
+[33mcommit 4bd2046ae8046acbb85b3ec7fb842e6d91856db8[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Sun Feb 5 19:34:57 2017 +0000
+
+    got the keys to work
+
+[33mcommit fe9213ef1145af72615dcde3e88f6408a5b94173[m
+Author: Slawomir Piela <Slawomir Piela>
+Date:   Sun Feb 5 16:43:22 2017 +0000
+
+    keep trying
+
+[33mcommit 4fbc064a723b094f805a72bf594d36604dd5613c[m
+Author: Slawomir Piela <Slawomir Piela>
+Date:   Sun Feb 5 15:47:35 2017 +0000
+
+    got the triangle to rotate slowly
+
+[33mcommit 72031a3905f13d787af173b1b4ec91bb46917cb0[m
+Author: Slawomir Piela <Slawomir Piela>
+Date:   Sun Feb 5 14:57:45 2017 +0000
+
+    lets try a triangle - new idea for the game
+
+[33mcommit 8636069aa11fa08744b8255b98799f92d1cc2c2d[m
+Author: Slawomir Piela <Slawomir Piela>
+Date:   Sun Feb 5 14:32:22 2017 +0000
+
+    need to get the player to work properly
+
+[33mcommit 0c266b04a7495826daecce632bcd3caf50633f44[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Fri Feb 3 20:21:41 2017 +0000
+
+    bullets no longer randomly appear, but from the width of mouseX & height-40 which is just above the racket
+
+[33mcommit 4ff99e8e5308b39307aeb245f752272f2b28bade[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Fri Feb 3 20:12:15 2017 +0000
+
+    framecount messed up, laggy
+
+[33mcommit d18366b57c68dbfec6be1ab3569e0623d2cab501[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Fri Feb 3 20:06:17 2017 +0000
+
+    random variables in bull class - experiment
+
+[33mcommit 89e5cd8b97dea9cec1956de8f8667fa5a506d1da[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Fri Feb 3 19:50:41 2017 +0000
+
+    empty bullet,game,readaction classes
+
+[33mcommit 4f9e52b7e358d8491fa26bf191a3b25938298391[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Fri Feb 3 19:41:10 2017 +0000
+
+    new
+
+[33mcommit c05f60325313f7a9d026a382cd14f7efc0dcc56b[m
+Author: slawomirpiela <slawomir.piela@outlook.com>
+Date:   Fri Feb 3 19:31:46 2017 +0000
+
+    Initial commit

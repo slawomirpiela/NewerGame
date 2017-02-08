@@ -10,13 +10,13 @@ void draw(){
     text("Options", width/2, 400);
     text("Quit", width/2, 450);
   }
-  if(mousePressed == true && mouseX > 420 && mouseX < 600 && mouseY > 330 && mouseY < 370 ){
+  if(stage == 1 && mousePressed == true && mouseX > 420 && mouseX < 600 && mouseY > 330 && mouseY < 370 ){
     stage = 2;
   }
-  if(mousePressed == true && mouseX > 420 && mouseX < 600 && mouseY > 370 && mouseY < 410 ){
+  if(stage == 1 && mousePressed == true && mouseX > 420 && mouseX < 600 && mouseY > 370 && mouseY < 410 ){
     stage = 3;
   }
-  if(mousePressed == true && mouseX > 420 && mouseX < 600 && mouseY > 410 && mouseY < 490 ){
+  if(stage == 1 && mousePressed == true && mouseX > 420 && mouseX < 600 && mouseY > 410 && mouseY < 490 ){
     stage = 4;
   }
   if(stage == 2){

@@ -25,11 +25,29 @@ class Game implements Action{
   void update(){
     background(100,100,100);
     play1.draw();
-    ball.draw();
+    ball.update();
     
-    if(ball.y == play1.pos.y && ball.x > play1.pos.x){
+    //If statements to bounce it off the player
+    if(ball.y == play1.pos.y && ball.x < play1.pos.x + (play1.pwidth/2) && ball.x <= play1.pos.x + play1.pwidth ){
+      println("true");
     ball.left();
     ball.changeDir();
+    }
+    if(ball.y == play1.pos.y && ball.x > play1.pos.x && ball.x <= play1.pos.x + (play1.pwidth/2) ){
+      println("true");
+    ball.right();
+    }
+    
+    //If statements to bounce it off sides
+    if(ball.x + ball.d / 2 >= width){
+      ball.left();
+    }
+    if (ball.x - ball.d / 2 <= 0){
+      ball.right();
+    }
+    if (ball.y - ball.d / 2 <= 0)
+    {
+      ball.changeDir();
     }
     
      for (Mob mobbies : Mobs) {
@@ -51,11 +69,12 @@ class Game implements Action{
     println("Winnin'");
     }
     
-    if(second() % 10 == 0){
-      attack.draw();
-    }
+    //if(second() % 10 == 0){
+    //  attack.draw();
+    //}
     
   }
+  
   
   void rightWall(){
     //Change direction where the mobs are going
@@ -63,9 +82,7 @@ class Game implements Action{
         direction = DIRECTION.LEFT;
       }
   }
-  
   void leftWall(){
-  
     if(direction == DIRECTION.LEFT){
           direction = DIRECTION.RIGHT;
         }

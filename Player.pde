@@ -3,7 +3,7 @@ class Player {
   char left, right;
   float theta = 0.0002;
   float ini;
-  
+  int pwidth = 80;
   
   //Constr
   Player(int x, int y, char left, char right){
@@ -14,17 +14,13 @@ class Player {
   
   void draw(){
     pos.x = mouseX - 30;
-    int pwidth = 80;
-
     fill(255);
     rectMode(CENTER);
     //rotateit();
     rect(pos.x, pos.y, pwidth, 18, 7);
     
     //need if statements to make sure it doesn't go to the sides
-    //if(pos.x == 50){
-    //  pos.x = 5;
-    //}
+
     //keyPressed();
     //keyReleased();
   }
