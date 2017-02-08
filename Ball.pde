@@ -7,7 +7,7 @@ class Ball extends BasicActions
   Ball(float x, float y, float z){
     pos = new PVector(x, y, z);
     speedx = 0;
-    speedy = 4;
+    speedy = 3;
   }
   
   void update(){
@@ -20,8 +20,16 @@ class Ball extends BasicActions
  }
   
   void resetIfdies(){
+    if(noOfLives > 0){
     pos.x = width/2;
     pos.y = height/2;
+    speedx = 0;
+    speedy += 1;
+    noOfLives -=1;
+    }
+    if(noOfLives == 0){
+      //gameOver();
+    }
   }
   
   void left(){

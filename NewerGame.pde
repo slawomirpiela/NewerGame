@@ -1,11 +1,12 @@
 int stage;
-int noOfLives;
-int playerScore;
+int noOfLives = 3;
+int playerScore = 0;
 Game game;
 GameMenu menu;
 Player play1;
 Ball ball;
   ArrayList<Mob> Mobs = new ArrayList<Mob>(); 
+  ArrayList<Mob> deadMobs = new ArrayList<Mob>();
 
 void setup()
 {
@@ -18,4 +19,5 @@ void setup()
 void draw()
 {
   menu.draw();
+  game.display();
 }

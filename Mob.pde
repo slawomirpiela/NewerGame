@@ -37,7 +37,7 @@ class Mob extends BasicActions
   }
   
   void dead(){
-    ArrayList<Mob> deadMobs = new ArrayList<Mob>();
+
       r = 0;
       g = 0;
       b = 0;
@@ -45,13 +45,16 @@ class Mob extends BasicActions
       hit = true;
       println(Mobs.size());
       println(deadMobs.size());
-      playerScore = playerScore + 1;
       println(playerScore);
+      
+      game.display();
 
+    
     for (Mob mobbies : deadMobs) {
       Mobs.remove(mobbies);
-      deadMobs.size();
+      println(deadMobs.size());
     }
+    
   }
   
   void toTheRight(){
@@ -63,10 +66,6 @@ class Mob extends BasicActions
   void moveDown(){
     pos.y+=3;
   }
-  
-  void display(){
-
-  } 
 
   void collide(){
     //With lower part of a brick
@@ -76,13 +75,14 @@ class Mob extends BasicActions
         dead();
         ball.changeDir();
         print("hit lower part");
+        playerScore +=  1;
       }
-      
     if (ball.pos.y + ball.pos.z / 2 >= pos.y && ball.pos.y - ball.pos.z /2 <= pos.y + 15 && ball.pos.x >= pos.x && ball.pos.x <= pos.x + 40) 
     {
       ball.changeDir();
       dead();
       print("hit upper part");
+            playerScore +=  1;
     }   
     }
           
