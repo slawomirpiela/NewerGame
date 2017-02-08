@@ -1,4 +1,4 @@
-class Mob
+class Mob extends BasicActions
 {
   PVector mobpos;
   Action action;;
@@ -16,7 +16,7 @@ class Mob
     b = random(140,255);
   }
   
-  void draw() {
+  void update() {
     //fill(random(170,255));
     fill(r,g,b);
     rect(mobpos.x, mobpos.y, 40, 15);
@@ -32,17 +32,11 @@ class Mob
   //if (mobpos.y > height - 20) {
   //  action.end();
   //}
-    
-   }
-  
-  void update() {
-
   }
   
   void toTheRight(){
     mobpos.x += 2;
-  }
-  
+  } 
   void toTheLeft(){
     mobpos.x -= 2;
   }

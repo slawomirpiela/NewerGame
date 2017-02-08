@@ -1,6 +1,7 @@
 int stage;
 Game game;
 GameMenu menu;
+Player play1;
 
 void setup()
 {

@@ -1,6 +1,6 @@
 class Game implements Action{
   ArrayList<Mob> Mobs = new ArrayList<Mob>(); 
-  Player play1;
+
   SuperAttack attack;
   Ball ball;
   DIRECTION direction = DIRECTION.RIGHT;
@@ -24,34 +24,13 @@ class Game implements Action{
   
   void update(){
     background(100,100,100);
-    play1.draw();
+    play1.update();
     ball.update();
-    
-    //If statements to bounce it off the player
-    if(ball.y == play1.pos.y && ball.x < play1.pos.x + (play1.pwidth/2) && ball.x <= play1.pos.x + play1.pwidth ){
-      println("true");
-    ball.left();
-    ball.changeDir();
-    }
-    if(ball.y == play1.pos.y && ball.x > play1.pos.x && ball.x <= play1.pos.x + (play1.pwidth/2) ){
-      println("true");
-    ball.right();
-    }
-    
-    //If statements to bounce it off sides
-    if(ball.x + ball.d / 2 >= width){
-      ball.left();
-    }
-    if (ball.x - ball.d / 2 <= 0){
-      ball.right();
-    }
-    if (ball.y - ball.d / 2 <= 0)
-    {
-      ball.changeDir();
-    }
+    ball.bounce();
+ 
     
      for (Mob mobbies : Mobs) {
-      mobbies.draw();
+      mobbies.update();
       }
       
       if(direction == DIRECTION.RIGHT) {

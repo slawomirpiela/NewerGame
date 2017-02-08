@@ -1,4 +1,5 @@
-class SuperAttack{
+class SuperAttack extends BasicActions
+{
   float randA;
   
   SuperAttack(){
@@ -6,7 +7,7 @@ class SuperAttack{
   }
 PImage img;
   
-void draw(){
+void update(){
   img = loadImage("bomb.png");
   img.resize(50,50);
   image(img, randA, 20);

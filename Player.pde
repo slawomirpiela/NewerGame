@@ -1,4 +1,5 @@
-class Player {
+class Player extends BasicActions
+{
   PVector pos;
   char left, right;
   float theta = 0.0002;
@@ -12,7 +13,7 @@ class Player {
     this.right = right;
   }
   
-  void draw(){
+  void update(){
     pos.x = mouseX - 30;
     fill(255);
     rectMode(CENTER);
