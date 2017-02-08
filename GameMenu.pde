@@ -21,6 +21,8 @@ void draw(){
   }
   if(stage == 2){
     game.update();
+    noOfLives = 3;
+    playerScore = 0;
   }
 }
 }

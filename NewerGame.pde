@@ -1,4 +1,6 @@
 int stage;
+int noOfLives;
+int playerScore;
 Game game;
 GameMenu menu;
 Player play1;

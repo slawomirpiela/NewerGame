@@ -2,10 +2,7 @@ class Mob extends BasicActions
 {
   PVector pos;
   Action action;;
-  float r;
-  float g;
-  float b;
-  float xvalue, yvalue;
+  float r,g,b,a;
   boolean hit;
   
   Mob(int x, int y, Action action, boolean hit){
@@ -14,13 +11,15 @@ class Mob extends BasicActions
     r = random(50,255);
     g = random(100,255);
     b = random(140,255);
+    a = 199;
     this.hit = false;
   }
   
   void update() {
     //fill(random(170,255));
     
-    fill(r,g,b);
+    noStroke();
+    fill(r,g,b,a);
     rect(pos.x, pos.y, 40, 15);
     collide();
     
@@ -42,17 +41,16 @@ class Mob extends BasicActions
       r = 0;
       g = 0;
       b = 0;
+      a = 0;
       hit = true;
       println(Mobs.size());
-      
+      println(deadMobs.size());
+      playerScore = playerScore + 1;
+      println(playerScore);
 
     for (Mob mobbies : deadMobs) {
-      if(hit == true){
-      deadMobs.add(mobbies);     
-      }
-    }
-    for (Mob mobbies : deadMobs) {
       Mobs.remove(mobbies);
+      deadMobs.size();
     }
   }
   

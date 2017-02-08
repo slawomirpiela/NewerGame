@@ -1,7 +1,5 @@
 class Game extends BasicActions implements Action {
 
-
-
   DIRECTION direction = DIRECTION.RIGHT;
 
   Game(){
@@ -45,26 +43,11 @@ class Game extends BasicActions implements Action {
         }
       }
       
-      //for (int i = 0; i < Mobs.size(); i ++)
-  //{
-    //If ball hits bottom of brick, ball moves down, increment score
-    //if (ball.pos.y - ball.pos.z / 2 <= mobbies[]pos.y + box[i].h &&  ball.pos.y - ball.pos.z/2 >= box[i].y && ball.pos.x >= box[i].x && ball.pos.x <= box[i].x + box[i].w  && box[i].hit == false )
-    //{
-     // ball.changeDir();
-     // hit();
-    //} 
-  //}
-      
     if(Mobs.size() == 0) {
     println("Winnin'");
     }
     
-    //if(second() % 10 == 0){
-    //  attack.draw();
-    //}
-    
   }
-  
   
   void rightWall(){
     //Change direction where the mobs are going
@@ -72,14 +55,17 @@ class Game extends BasicActions implements Action {
         direction = DIRECTION.LEFT;
       }
   }
+  
   void leftWall(){
     if(direction == DIRECTION.LEFT){
           direction = DIRECTION.RIGHT;
         }
-        //for (Mob mobbies : Mobs){
-        //  mobbies.moveDown();
-       // }
+  }
   
+  void displayScore(){
+    fill(0);
+    text("Score : " + noOfLives, 50, 750);
+    text("Lives : " + playerScore, 50, 780);
   }
   
   void hit(){
