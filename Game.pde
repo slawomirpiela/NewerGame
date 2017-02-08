@@ -1,23 +1,23 @@
-class Game implements Action{
-  ArrayList<Mob> Mobs = new ArrayList<Mob>(); 
+class Game extends BasicActions implements Action {
 
-  SuperAttack attack;
-  Ball ball;
+
+
   DIRECTION direction = DIRECTION.RIGHT;
 
   Game(){
     play1 = new Player(0, height - 80, 'a', 'd');
-    attack = new SuperAttack();
     ball = new Ball(width/2, height/2, 10);
     
     for (int x = 1; x < 10; x++) {
       for (int y = 1; y < 10; y++){
       //mob1.update();
       
-      Mobs.add(new Mob(x*50, y*30, this));
+      Mobs.add(new Mob(x*50, y*30, this, false));
 
       //To check if correct amt of mobs have been spawned
       println(Mobs.size());
+      
+
       }
     }
   }
@@ -27,22 +27,33 @@ class Game implements Action{
     play1.update();
     ball.update();
     ball.bounce();
- 
     
      for (Mob mobbies : Mobs) {
       mobbies.update();
+      mobbies.display();
+
       }
-      
-      if(direction == DIRECTION.RIGHT) {
-        for (Mob mobbies : Mobs) {
+     
+     if(direction == DIRECTION.RIGHT) {
+       for (Mob mobbies : Mobs) {
           mobbies.toTheRight();
-        }
-      } else if(direction == DIRECTION.LEFT){
+       }
+      }
+      else if(direction == DIRECTION.LEFT){
         for (Mob mobbies : Mobs) {
           mobbies.toTheLeft();
+        }
       }
-     }
-     hit();
+      
+      //for (int i = 0; i < Mobs.size(); i ++)
+  //{
+    //If ball hits bottom of brick, ball moves down, increment score
+    //if (ball.pos.y - ball.pos.z / 2 <= mobbies[]pos.y + box[i].h &&  ball.pos.y - ball.pos.z/2 >= box[i].y && ball.pos.x >= box[i].x && ball.pos.x <= box[i].x + box[i].w  && box[i].hit == false )
+    //{
+     // ball.changeDir();
+     // hit();
+    //} 
+  //}
       
     if(Mobs.size() == 0) {
     println("Winnin'");
@@ -70,14 +81,15 @@ class Game implements Action{
        // }
   
   }
-   
-
   
   void hit(){
-    ArrayList<Mob> deadMobs = new ArrayList<Mob>();
+    if (hit == true){
+      println("NO");
     
+    ArrayList<Mob> deadMobs = new ArrayList<Mob>();
     for (Mob mobbies : deadMobs) {
       Mobs.remove(mobbies);
+    }
     }
   }
   

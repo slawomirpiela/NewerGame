@@ -2,6 +2,8 @@ int stage;
 Game game;
 GameMenu menu;
 Player play1;
+Ball ball;
+  ArrayList<Mob> Mobs = new ArrayList<Mob>(); 
 
 void setup()
 {

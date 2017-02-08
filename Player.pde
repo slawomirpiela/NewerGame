@@ -20,7 +20,7 @@ class Player extends BasicActions
     //rotateit();
     rect(pos.x, pos.y, pwidth, 18, 7);
     
-    //need if statements to make sure it doesn't go to the sides
+
 
     //keyPressed();
     //keyReleased();
