@@ -62,6 +62,7 @@ void collide(){
       print("hit lower part"); //Prints when the if condition is met for testing purposes
       playerScore +=  1; //Adds a point to the player's score
     }
+    //Now it checks if the ball hits the upper part of a mob
     if (ball.pos.y + ball.pos.z/2 >= pos.y && ball.pos.y - ball.pos.z /2 <= pos.y + 15 && ball.pos.x >= pos.x && ball.pos.x <= pos.x + 40) 
     {
       ball.changeDir(); //Calls the chang direction method to change direction in which the ball bounces off
@@ -69,13 +70,14 @@ void collide(){
       print("hit upper part"); //Prints when the if condition is met for testing purposes
       playerScore +=  1; //Adds a point to the player's score
     }   
-    }
+  }
           
-    //With the bottom
-      if (ball.pos.y > height){
-        ball.resetIfdies();
-      }
- }
+  //Now it checks if the player misses the ball
+  if (ball.pos.y > height){
+    ball.resetIfdies();
+  }
+}
+
 }
   
 

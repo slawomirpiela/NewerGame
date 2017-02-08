@@ -1,7 +1,10 @@
 class GameMenu {
-  
+//Class that does the game menu
+
+//sets the game menu to stage 1
 int stage = 1;
   
+  //Change to a different stage depending on the option player chooses
 void draw(){
   if(stage == 1){
     background(0);

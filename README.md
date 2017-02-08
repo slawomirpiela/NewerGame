@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+#	"NewerGame"
+## Welcome to my game project page
 
-You can use the [editor on GitHub](https://github.com/slawomirpiela/NewerGame/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Description
 
-### Markdown
+_Currently a single player game created for my OOP project._
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**Player currently is able to**
 
-```markdown
-Syntax highlighted code block
+- Start a game
+- Change the difficulty (coming soon)
+- Use the mouse to control a racket
+- Hit the ball with the racket in order to destroy all of the bricks "mobs"
+- Ball changes direction everytime it hits a wall/mob/racket as close to natural movements as I could
+- Player has 3 lives: 3 balls, which appear one after another once he/she misses a ball as it's coming down
+- Player gets points for every mob killed
+- A leaderboard of player scores (coming soon)
 
-# Header 1
-## Header 2
-### Header 3
+#### Preview video of the game
+(coming soon)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/slawomirpiela/NewerGame/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#####Author:
+Slawomir Piela
