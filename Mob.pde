@@ -37,24 +37,14 @@ class Mob extends BasicActions
   }
   
   void dead(){
-
       r = 0;
       g = 0;
       b = 0;
       a = 0;
       hit = true;
       println(Mobs.size());
-      println(deadMobs.size());
       println(playerScore);
-      
       game.display();
-
-    
-    for (Mob mobbies : deadMobs) {
-      Mobs.remove(mobbies);
-      println(deadMobs.size());
-    }
-    
   }
   
   void toTheRight(){
