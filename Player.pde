@@ -17,8 +17,6 @@ class Player {
     int pwidth = 80;
 
     fill(255);
-    stroke(0);
-    strokeWeight(3); 
     rectMode(CENTER);
     //rotateit();
     rect(pos.x, pos.y, pwidth, 18, 7);

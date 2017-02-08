@@ -1,20 +1,25 @@
 class Ball
 {
-  int x, y;
-  int speed = 5;
+  float x, y, d;
+  float speedx, speedy; //Veliocity
   
   //Constructor
-  Ball(int x, int y){
-    this.x = x;
-    this.y = y;
+  Ball(){
+    x = width/2;
+    y = height/2;
+    d = 10;
+    speedx = 0;
+    speedy = 4;
+    
   }
   
   void draw(){
    fill(255);
+   stroke(0);
    ellipseMode(CENTER);
-   ellipse(x, y, 10, 10);
-   
-   y-=3;
+   ellipse(x, y, d, d);
+   x += speedx;
+   y += speedy;
   }
   
 }
