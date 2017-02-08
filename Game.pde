@@ -27,7 +27,7 @@ class Game implements Action{
     play1.draw();
     ball.draw();
     
-    if(ball.y == play1.pos.y){
+    if(ball.y == play1.pos.y && ball.x > play1.pos.x){
     ball.left();
     ball.changeDir();
     }
