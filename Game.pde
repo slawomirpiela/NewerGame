@@ -8,7 +8,7 @@ class Game implements Action{
   Game(){
     play1 = new Player(0, height - 80, 'a', 'd');
     attack = new SuperAttack();
-    ball = new Ball();
+    ball = new Ball(width/2, height/2, 10);
     
     for (int x = 1; x < 10; x++) {
       for (int y = 1; y < 10; y++){

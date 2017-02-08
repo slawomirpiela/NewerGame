@@ -1,15 +1,13 @@
 class Mob extends BasicActions
 {
-  PVector mobpos;
+  PVector pos;
   Action action;;
   float r;
   float g;
   float b;
   
   Mob(int x, int y, Action action){
-    mobpos = new PVector(x,y);
-    this.mobpos.x = x;
-    this.mobpos.y = y;
+    pos = new PVector(x,y);
     this.action = action;
     r = random(50,255);
     g = random(100,255);
@@ -19,13 +17,13 @@ class Mob extends BasicActions
   void update() {
     //fill(random(170,255));
     fill(r,g,b);
-    rect(mobpos.x, mobpos.y, 40, 15);
+    rect(pos.x, pos.y, 40, 15);
     
-  if (mobpos.x > width - 30) {
+  if (pos.x > width - 30) {
     action.rightWall(); 
   }
   
-  if (mobpos.x < 5 ){
+  if (pos.x < 5 ){
     action.leftWall();
   }
    
@@ -35,13 +33,13 @@ class Mob extends BasicActions
   }
   
   void toTheRight(){
-    mobpos.x += 2;
+    pos.x += 2;
   } 
   void toTheLeft(){
-    mobpos.x -= 2;
+    pos.x -= 2;
   }
   void moveDown(){
-    mobpos.y+=3;
+    pos.y+=3;
   }
   
 
